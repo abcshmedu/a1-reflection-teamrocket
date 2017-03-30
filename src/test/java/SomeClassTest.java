@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.InvocationTargetException;
+
 import static org.junit.Assert.*;
 
 
@@ -16,7 +18,7 @@ public class SomeClassTest {
 
 
     @Test
-    public void someTest() throws ClassNotFoundException, IllegalAccessException {
+    public void someTest() throws ClassNotFoundException, IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         System.out.println(renderer.render());
         /*
         assertEquals("Instance of edu.hm.SomeClass:\n" + "foo (Type int): 5\narray (Type int[]) [1, 2, 3, ]\n" +

@@ -1,4 +1,6 @@
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class Renderer {
     private final Object obj;
@@ -7,11 +9,13 @@ public class Renderer {
         this.obj = obj;
     }
 
-    public String render() throws ClassNotFoundException, IllegalAccessException {
+    public String render() throws ClassNotFoundException, IllegalAccessException, NoSuchMethodException,
+            InvocationTargetException, InstantiationException {
+
         if(obj == null)
             return "null";
-        Class<?> cut = Class.forName(obj.getClass().getSimpleName());
-        Field[] fields = cut.getDeclaredFields();
+        final Class<?> cut = Class.forName(obj.getClass().getSimpleName());
+        final Field[] fields = cut.getDeclaredFields();
         String info = "";
         for(Field field: fields){
             if(field == null)
@@ -34,11 +38,10 @@ public class Renderer {
 
 
             }else{
-                //TODO
-
+                Class<?> aClass = Class.forName(annotation.with());
+                final Method method = aClass.getMethod("render", Object.class);
+                info += (String) method.invoke(aClass.getConstructor().newInstance(), field.get(obj));
             }
-
-
         }
 
         return info;
