@@ -16,7 +16,7 @@ public class SomeClassTest {
 
 
     @Test
-    public void someTest() throws ClassNotFoundException {
+    public void someTest() throws ClassNotFoundException, IllegalAccessException {
         System.out.println(renderer.render());
         /*
         assertEquals("Instance of edu.hm.SomeClass:\n" + "foo (Type int): 5\narray (Type int[]) [1, 2, 3, ]\n" +

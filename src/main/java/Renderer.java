@@ -7,7 +7,7 @@ public class Renderer {
         this.obj = obj;
     }
 
-    public String render() throws ClassNotFoundException {
+    public String render() throws ClassNotFoundException, IllegalAccessException {
         if(obj == null)
             return "null";
         Class<?> cut = Class.forName(obj.getClass().getSimpleName());
@@ -25,7 +25,7 @@ public class Renderer {
 
                 final String name = field.getName();
                 final String type = field.getType().toString();
-                final String value = field.toString();
+                final String value = field.get(obj).toString();
 
                 info+= name + " (Type " + type + "): " + value + '\n';
                 if(!isAccessible){
