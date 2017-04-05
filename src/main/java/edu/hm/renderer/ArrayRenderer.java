@@ -1,5 +1,4 @@
-import java.util.Arrays;
-
+package edu.hm.renderer;
 /**
  * Created by osmos on 3/30/17.
  */
@@ -12,12 +11,11 @@ public class ArrayRenderer {
     }
 */
 
-    public String render(Object object){
-        String info = "[";
-        int[] objects = (int[]) object;
+    public String render(int[] object){
+        String info = " (Type int[]) [";
+        int[] objects = object;
         for (Object obj : objects) {
-            System.out.println(obj);
-            info += obj.toString();
+            info += obj.toString() + ", ";
         }
 
 
