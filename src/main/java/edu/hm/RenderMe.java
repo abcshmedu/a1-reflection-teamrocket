@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * @author Aykut Yilmaz, Julian Keppeler
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD,ElementType.METHOD})
 public @interface RenderMe {
 
     String with() default "";

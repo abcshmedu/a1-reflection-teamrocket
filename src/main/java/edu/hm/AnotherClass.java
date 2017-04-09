@@ -4,13 +4,17 @@ package edu.hm;
  * @author Aykut Yilmaz, Julian Keppeler
  */
 public class AnotherClass {
-    @RenderMe(with = "edu.hm.renderer.ArrayRenderer") private int[] intArray;
-    @RenderMe public boolean bool;
-    @RenderMe protected final String str;
+    @RenderMe(with = "edu.hm.renderer.ArrayRenderer") private int[] intArray = {5,4,3,2,1,0};
+    @RenderMe public boolean bool = false;
+    @RenderMe protected final String str = "test";
 
-    public AnotherClass(int[] intArray, String str, boolean bool) {
-        this.intArray = intArray;
-        this.str = str;
-        this.bool = bool;
+
+    @RenderMe public void sillyMethod(){
+        System.out.println("Hallöchen");;
     }
+
+    public void noAnnotationMethod(){
+        System.out.println("Error");
+    }
+
 }

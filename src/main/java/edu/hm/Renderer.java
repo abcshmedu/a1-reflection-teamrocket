@@ -1,6 +1,5 @@
 package edu.hm;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -44,6 +43,26 @@ public class Renderer {
                 field.setAccessible(false); // make field inaccessable again, if it was private before
             }
         }
+
+
+        final Method[] methods = cut.getDeclaredMethods();
+
+        for(Method method: methods){
+            if(method == null)
+                continue;
+            final RenderMe annotation = method.getAnnotation(RenderMe.class);
+            if(annotation == null) continue;    // skip fields without annotation
+            final boolean isAccessible = method.isAccessible();
+
+            if(!isAccessible)   // check field for accessability and make it accessable
+                method.setAccessible(true);
+            method.invoke(cut.getConstructor().newInstance());
+            if(!isAccessible)
+                method.setAccessible(false);
+        }
+
+
+
         return info;
     }
 

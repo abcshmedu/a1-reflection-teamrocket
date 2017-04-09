@@ -3,6 +3,7 @@ package edu.hm;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 
 import static org.junit.Assert.*;
@@ -43,13 +44,14 @@ public class SomeClassTest {
 
 
     @Test
-    public void anotherTest() throws ClassCastException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        AnotherClass another = new AnotherClass(new int[]{5,4,3,2,1,0}, "test", false);
+    public void invokeMethodTest() throws ClassCastException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        AnotherClass another = new AnotherClass();
         Renderer r = new Renderer(another);
-        String want = "Instance of edu.hm.AnotherClass:\n" + "intArray (Type int[]) [5, 4, 3, 2, 1, 0, ]\n" +
-                "bool (Type boolean): false\n" +
-                "str (Type java.lang.String): test\n";
-        assertEquals(r.render(),want);
+        java.io.ByteArrayOutputStream out = new java.io.ByteArrayOutputStream();
+        System.setOut(new java.io.PrintStream(out));
+        r.render();
+
+        assertEquals("Hallöchen\n",out.toString());
     }
 
 }
