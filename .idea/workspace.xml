@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ec33e78-5148-41bc-8907-bd014940f08f" name="Default" comment="+ method invoking">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
+    <list default="true" id="6ec33e78-5148-41bc-8907-bd014940f08f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/hm/AnotherClass.java" afterPath="$PROJECT_DIR$/src/main/java/edu/hm/AnotherClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/hm/RenderMe.java" afterPath="$PROJECT_DIR$/src/main/java/edu/hm/RenderMe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/hm/Renderer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/hm/Renderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/hm/SomeClass.java" afterPath="$PROJECT_DIR$/src/main/java/edu/hm/SomeClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/hm/SomeClassTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/hm/SomeClassTest.java" />
     </list>
     <ignored path="a1-reflection-teamrocket.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SomeClassTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SomeClassTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/hm/SomeClassTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -83,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SomeClass.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SomeClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/hm/SomeClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -1362,7 +1356,7 @@
       <workItem from="1491392087948" duration="4629000" />
       <workItem from="1491744795333" duration="1792000" />
       <workItem from="1491747758451" duration="4961000" />
-      <workItem from="1491752732846" duration="1564000" />
+      <workItem from="1491752732846" duration="1594000" />
     </task>
     <task id="LOCAL-00001" summary="TestUpload">
       <created>1490867287383</created>
@@ -1413,7 +1407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491752856772</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="+ bissl checkstyle &amp; javadoc">
+      <created>1491754312388</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491754312388</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1449,7 +1450,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19611000" />
+    <option name="totallyTimeSpent" value="19641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1055" extended-state="6" />
@@ -1509,7 +1510,8 @@
     <MESSAGE value="TOdO - write more tests&#10;TODO - write some comments" />
     <MESSAGE value="neuer test&#10;methode ausgelagert" />
     <MESSAGE value="+ method invoking" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ method invoking" />
+    <MESSAGE value="+ bissl checkstyle &amp; javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ bissl checkstyle &amp; javadoc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1850,14 +1852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/hm/SomeClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/hm/RenderMe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1873,6 +1867,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/hm/SomeClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
