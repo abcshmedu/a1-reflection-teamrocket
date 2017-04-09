@@ -2,7 +2,9 @@ package edu.hm;
 
 import java.util.Date;
 
-
+/**
+ * @author Aykut Yilmaz, Julian Keppeler
+ */
 public class SomeClass {
     @RenderMe private int foo;
     @RenderMe(with="edu.hm.renderer.ArrayRenderer") int[] array = {1, 2, 3, };
