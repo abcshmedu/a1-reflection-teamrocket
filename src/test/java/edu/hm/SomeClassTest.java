@@ -9,6 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 import static org.junit.Assert.*;
 
 /**
+ * Softwarearchitektur Praktikumsaufgabe 1.
  * @author Aykut Yilmaz, Julian Keppeler
  */
 public class SomeClassTest {
@@ -42,7 +43,6 @@ public class SomeClassTest {
     }
 
 
-
     @Test
     public void invokeMethodTest() throws ClassCastException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         AnotherClass another = new AnotherClass();
@@ -50,8 +50,7 @@ public class SomeClassTest {
         java.io.ByteArrayOutputStream out = new java.io.ByteArrayOutputStream();
         System.setOut(new java.io.PrintStream(out));
         r.render();
-
-        assertEquals("Hallöchen\n",out.toString());
+        assertEquals("Hallöchen\n", out.toString());
     }
 
 }

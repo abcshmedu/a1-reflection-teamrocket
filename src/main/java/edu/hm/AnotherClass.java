@@ -1,19 +1,38 @@
 package edu.hm;
 
 /**
+ * Softwarearchitektur Praktikumsaufgabe 1.
  * @author Aykut Yilmaz, Julian Keppeler
  */
 public class AnotherClass {
-    @RenderMe(with = "edu.hm.renderer.ArrayRenderer") private int[] intArray = {5,4,3,2,1,0};
-    @RenderMe public boolean bool = false;
-    @RenderMe protected final String str = "test";
+    @RenderMe(with = "edu.hm.renderer.ArrayRenderer")
+    private final int[] intArray = {0, 0, 1, 1, 1, 0};
+    @RenderMe
+    private boolean bool = false;
+    @RenderMe
+    private final String str = "test";
 
-
-    @RenderMe public void sillyMethod(){
-        System.out.println("Hallöchen");;
+    /**
+     * Getter for int Array.
+     *
+     * @return int Array.
+     */
+    public int[] getIntArray() {
+        return intArray;
     }
 
-    public void noAnnotationMethod(){
+    /**
+     * Test method for method invoking.
+     */
+    @RenderMe
+    public void sillyMethod() {
+        System.out.println("Hallöchen");
+    }
+
+    /**
+     * Test method for method invoking.
+     */
+    public void noAnnotationMethod() {
         System.out.println("Error");
     }
 
